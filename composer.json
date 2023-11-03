@@ -1,0 +1,12 @@
+{
+    "name": "faramarz/php-framework",
+    "description": "this is the pure php framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Faramarz Mhr",
+            "email": "mfaramarz1991@gmail.com"
+        }
+    ],
+    "require": {}
+}
