@@ -1,0 +1,15 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    <h1>{{ name }}</h1>
+
+    <div>
+        {% if users is not empty %}
+            {% for user in users %}
+                <div><a href="{{ route('users.show', { 'user': user.id }) }}">{{ user.first_name }}</a></div>
+            {% endfor %}
+
+            {{ users.links() | raw }}
+        {% endif %}
+    </div>
+{% endblock %}
