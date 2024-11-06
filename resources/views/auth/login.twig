@@ -1,0 +1,27 @@
+{% extends 'layouts/app.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        {{ csrf() | raw }}
+        <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" value="{{ old('email') }}">
+            {% if errors.email %}
+                <div>{{ errors.email }}</div>
+            {% endif %}
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            {% if errors.password %}
+                <div>{{ errors.password }}</div>
+            {% endif %}
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+{% endblock %}
